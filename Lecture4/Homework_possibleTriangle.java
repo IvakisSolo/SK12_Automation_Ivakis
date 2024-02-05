@@ -35,7 +35,7 @@ public class Homework_possibleTriangle {
              }
         }
         else {
-            System.out.println("Триъгълникът не е възможен");
+            System.out.println("Невъзможно е да се образува триъгълник");
         }
     }
 }
