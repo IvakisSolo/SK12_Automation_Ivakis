@@ -1,8 +1,8 @@
-package Lecture4.Homework;
+package Lecture4;
 
 import java.util.Scanner;
 
-public class possibleTriangle {
+public class Homework_possibleTriangle {
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         System.out.print("Въведете първият ъгъл: ");
