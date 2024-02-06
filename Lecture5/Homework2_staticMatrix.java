@@ -18,8 +18,9 @@ public class Homework2_staticMatrix {
         array[3][2]=12;
         for (int vertical = 0; vertical < 4; vertical++ ) {
             for (int horizontal = 0; horizontal < 3; horizontal++) {
-                System.out.println(array[vertical][horizontal]);
+                System.out.print(array[vertical][horizontal] + " ");
             }
+            System.out.println();
         }
     }
 }
