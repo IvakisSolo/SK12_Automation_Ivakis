@@ -20,7 +20,7 @@ public class Homework3_calculateRevenue {
             discount = percentFull;
             System.out.println("Приходите са:" + revenue);
             System.out.println("Отстъпката е:" + discount + "(" + discount1 + "%)");
-        } else if ((quantity >= 100) && (quantity <= 120)) {
+        } else if (quantity <= 120) {
             discount2 = 15;
             percent = ((discount2 / 100) * price);
             percentFull = quantity * percent;
