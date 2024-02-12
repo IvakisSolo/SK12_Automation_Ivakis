@@ -11,6 +11,7 @@ public class Homework4_evenNumber {
         return num %2 == 0;
     }
     public static void main(String[] args) {
+
         System.out.printf("Числото е четно: " + isEven());
     }
 }

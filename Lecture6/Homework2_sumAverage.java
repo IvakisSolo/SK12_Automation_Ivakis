@@ -27,6 +27,7 @@ public class Homework2_sumAverage {
     }
 
     public static void main(String[] args) {
+
         System.out.println("Средната сума от числата е: " + (sumAverage()));
     }
 }
