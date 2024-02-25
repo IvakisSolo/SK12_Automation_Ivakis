@@ -13,8 +13,9 @@ public class CarModel {
         carHorsePower = horsePower;
         boughtSecondHand = secondHand;
     }
-    public CarModel(int releaseYear, int horsePower, boolean secondHand) {
-        this("N/A", "N/A", releaseYear, horsePower, secondHand);
+
+    public CarModel(String name, int releaseYear, int horsePower, boolean secondHand) {
+        this(name, "N/A", releaseYear, horsePower, secondHand);
     }
     public CarModel(String name, String color, boolean secondHand) {
         this(name, color, -1, -1, secondHand);
@@ -23,6 +24,7 @@ public class CarModel {
         this(name, color, releaseYear, horsePower, false);
     }
     public CarModel() {
+        this("N/A", "N/A", -1, -1, false);
     }
     public String toString() {
         return
