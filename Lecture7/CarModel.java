@@ -28,11 +28,11 @@ public class CarModel {
     }
     public String toString() {
         return
-                "Car Name: " + carName +
-                ", Car Color: " + carColor +
-                ", Car Release Year: " + carReleaseYear +
-                ", Car Horse Power: " + carHorsePower +
-                ", Bought Second Hand: " + boughtSecondHand +
+                "Car Name: " + carName + "\n" +
+                "Car Color: " + carColor + "\n" +
+                "Car Release Year: " + carReleaseYear + "\n" +
+                "Car Horse Power: " + carHorsePower + "\n" +
+                "Bought Second Hand: " + boughtSecondHand +
                 '.';
         }
     }
