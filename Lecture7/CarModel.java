@@ -24,4 +24,13 @@ public class CarModel {
     }
     public CarModel() {
     }
-}
+    public String toString() {
+        return
+                "Car Name: " + carName +
+                ", Car Color: " + carColor +
+                ", Car Release Year: " + carReleaseYear +
+                ", Car Horse Power: " + carHorsePower +
+                ", Bought Second Hand: " + boughtSecondHand +
+                '.';
+        }
+    }
