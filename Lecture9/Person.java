@@ -14,7 +14,6 @@ abstract public class Person {
     protected final Religion religion;
     protected String country;
     protected final int age;
-
     public Person(String name, String gender, String language, String job, String nationality, String EGN, String country, Religion religion) {
         checkEGN(EGN);
         this.gender = getGender(gender);
@@ -28,18 +27,15 @@ abstract public class Person {
         this.age = calculateAge(this.EGN);
         this.birthDate = calculateBirthDay(EGN);
     }
-
     public Person(String name, String gender, String language, String nationality, String EGN, Religion religion, String country) {
         this(name, gender, language, null, nationality, EGN, country, religion);
     }
-
     public void checkEGN(String EGN) {
         int egnLength = EGN.length();
         if (!(egnLength == 10 && EGN.matches("\\d+"))) {
             throw new RuntimeException("The EGN must be exactly 10 digits.");
         }
     }
-
     public String getGender(String gender) {
         if (gender == "Female" || gender == "Male") {
             return gender;
@@ -48,7 +44,6 @@ abstract public class Person {
             return "Female";
         }
     }
-
     private int calculateAge(String EGN) {
         String birthYearString;
 
@@ -68,7 +63,6 @@ abstract public class Person {
 
         return currentYear - birthYear;
     }
-
     private String calculateBirthDay(String EGN) {
         String birthYearString;
         String yearDigits = EGN.substring(0, 2);
@@ -90,11 +84,9 @@ abstract public class Person {
         }
         return dayDigits + "." + monthNumber + "." + birthYearString;
     }
-
     public void sayHello() {
-        System.out.println("Hello");
-    };
-
+        System.out.println("Hello!");
+    }
     public void celebrateEaster() {
         if (this.religion == Religion.ORTHODOX || this.religion == Religion.CATHOLIC) {
             System.out.println("I celebrate Easter.");
@@ -102,49 +94,37 @@ abstract public class Person {
             System.out.println("I don't celebrate Easter.");
         }
     }
-
     abstract public Boolean isAdult();
-
     public Boolean canTakeLoan() {
         return (this.job != null && isAdult());
     }
-
     public String getName() {
         return name;
     }
-
     public String getGender() {
         return gender;
     }
-
     public String getLanguage() {
         return language;
     }
-
     public String getJob() {
         return job;
     }
-
     public String getNationality() {
         return nationality;
     }
-
     public String getEGN() {
         return EGN;
     }
-
     public String getBirthDate() {
         return birthDate;
     }
-
     public String getCountry() {
         return country;
     }
-
     public int getAge() {
         return age;
     }
-
     public String toString() {
         String toString =
                 "Name: " + this.name + "\n"
@@ -157,7 +137,8 @@ abstract public class Person {
                         + "Country: " + this.country + "\n"
                         + "Language: " + this.language + "\n"
                         + "Job: " + this.job + "\n"
-                        + "Adult: " + isAdult() + "\n";
+                        + "Adult: " + isAdult() + "\n"
+                        + "Can Take Loan: " + canTakeLoan() + "\n";
         return toString;
     }
 }
